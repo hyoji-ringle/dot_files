@@ -1,0 +1,29 @@
+[user]
+        #email = tahyok7123@naver.com
+        #name = hyokkkk
+	email = hyoji.an@ringleplus.com
+	name = hyoji-ringle
+[core]
+	editor = vim
+	pager = bat
+[diff]
+        renames = copies
+
+[pull]
+        rebase = true
+[merge]
+        conflictstyle = diff3
+
+[rerere]
+        enabled = yes
+[stash]
+        showPatch = true
+[status]
+        showStash = true
+[submodule]
+        fetchJobs = 0
+
+[man]
+	viewer = catman
+[man "catman"]
+	cmd = man -P \"col -b\"
