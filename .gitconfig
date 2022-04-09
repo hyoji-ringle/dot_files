@@ -1,8 +1,3 @@
-[user]
-        #email = tahyok7123@naver.com
-        #name = hyokkkk
-	email = hyoji.an@ringleplus.com
-	name = hyoji-ringle
 [core]
 	editor = vim
 	pager = bat
@@ -27,3 +22,10 @@
 	viewer = catman
 [man "catman"]
 	cmd = man -P \"col -b\"
+
+[includeIf "gitdir:~/workspace/ringle/"]
+    path = ~/workspace/ringle/.gitconfig
+
+[includeIf "gitdir:~/workspace/hyokkkk_personal/"]
+    path = ~/workspace/hyokkkk_personal/.gitconfig
+

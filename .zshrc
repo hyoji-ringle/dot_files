@@ -13,7 +13,13 @@ fi
 
 alias pv='ssh -i ~/.ssh/ringle_seoul.pem ec2-user@3.36.218.239'
 alias qa='ssh -i ~/.ssh/ringle_seoul.pem ec2-user@3.37.249.66'
-alias rs='ssh -i ~/.ssh/ringle_seoul.pem ec2-user@3.35.90.108'
+alias rsv='ssh -i ~/.ssh/ringle_seoul.pem ec2-user@3.35.90.108'
+alias rs='rails server'
+alias rc='rails console'
+alias ksv='kill -9 $(lsof -i tcp:3000 -t)
+: 1647485549:0;'
+
+alias deep='ssh ahj9348@147.46.125.117 -p20876 -i ~/.ssh/id_rsa'
 
 
 #
@@ -78,8 +84,8 @@ typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=2
 # zsh-sensible
 #
 if (( $+commands[lsd] )); then
-     alias l='lsd -Al --date=relative --group-dirs=first --blocks=permission,user,size,date,name'
      alias ll='lsd -l --date=relative --group-dirs=first --blocks=permission,user,size,date,name'
+     alias l='lsd -Al --date=relative --group-dirs=first --blocks=permission,user,size,date,name'
      alias lt='lsd --tree --depth=2 --date=relative --group-dirs=first'
 else
     alias l='ls -alh --color=auto'
@@ -152,3 +158,14 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+export SERVER="local"
+
+export LOCAL_SERVER_PATH=/Users/HYOJI/workspace/ringle/beta
+export LOCAL_DEV=true
+alias dcdown='docker compose down && docker volume rm $(docker volume ls -q)'
+alias dc='docker compose'
+alias dcupall='docker compose --profile all up'
+alias dcupserver='docker compose --profile server up'
+alias dcuphttps='docker compose --profile serverhttps up'

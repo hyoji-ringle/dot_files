@@ -177,6 +177,7 @@ cabbrev ㅈ w
 cabbrev ㅂ q
 cabbrev ㅈㅂ wq
 cabbrev sws StripWhitespace
+cabbrev nt NERDTree
 
 " use vim in Korean
 set langmap=ㅁㅠㅊㅇㄷㄹㅎㅗㅑㅓㅏㅣㅡㅜㅐㅔㅂㄱㄴㅅㅕㅍㅈㅌㅛㅋ;abcdefghijklmnopqrstuvwxyz
